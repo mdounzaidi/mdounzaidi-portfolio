@@ -1,6 +1,6 @@
 import React from "react";
 import { FaArrowUpLong } from "react-icons/fa6";
-
+import myImage from "../assets/images/my1.jpeg";
 function About() {
   return (
     <div
@@ -26,7 +26,7 @@ function About() {
           </div>
           <img
             className="w-full rounded-3xl mt-10 md:w-[40vw] md:mt-0"
-            src="./src/assets/images/my1.jpeg"
+            src={myImage}
             alt="about us"
           />
         </div>

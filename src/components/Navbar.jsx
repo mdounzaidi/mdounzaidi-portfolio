@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../assets/logo.svg";
 // import { LuMenu } from "react-icons/lu";
+import myImage from "../assets/images/logo.png"; ;
 
 function Navbar() {
   const navLinks = ["Home", "About", "Projects", "Skills", "Experience", "Contact"];
@@ -8,7 +9,7 @@ function Navbar() {
     <div className="sticky bg-zinc-900/40 backdrop-blur-md top-0 z-[999] py-4 sm:py-5">
       <div className="container w-full font-NueueMontreal flex items-center justify-between">
         <div className="logo">
-          <img src={"./src/assets/images/logo.png"} className="w-39 brightness-0 invert " alt="ochi logo" />
+          <img src={myImage} className="w-39 brightness-0 invert " alt="ochi logo" />
         </div>
         <div className="links items-center gap-10 hidden md:flex">
           {navLinks.map((item, index) => (
