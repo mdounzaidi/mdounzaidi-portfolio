@@ -10,25 +10,25 @@ function HeroSection() {
       data-scroll-speed="-0.3"
       className="container w-full"
     >
-      <div className="textstructure py-[10vh]">
-        {["We Create", "Eye Opening", "Presentations"].map((item, index) => (
+      <div className="textstructure py-[10vh] pt-[16vh]">
+        {["I ENGINEER", "MODERN ","APPLICATIONS"].map((item, index) => (
           <div key={index} className="masker">
-            <div className="w-fit flex items-center overflow-hidden">
+            <div className="w-fit flex items-center overflow-hidden ">
               {index === 1 && (
                 <motion.div
                   initial={{ width: 0 }}
-                  animate={{ width: "16vw" }}
+                  animate={{ width: "18vw" }}
                   transition={{
                     ease: [0.76, 0, 0.24, 1],
                     duration: 1,
                     delay: 1,
                   }}
-                  className="w-[8vw] h-[5vh] sm:h-[6vh] sm:w-[5vw] sm:mt-5 mr-5 rounded-md bg-green-500"
+                  className="w-[8vw] h-[6vh] sm:h-[6vh] sm:w-[5vw] sm:mt-5 mr-5 rounded-md bg-[#004D43]"
                 ></motion.div>
               )}
               <h1
                 key={index}
-                className="font-FoundersGroteskCondensed sm:-mb-[1vw] md:text-[10vw] sm:text-[12vw] text-[16vw] uppercase whitespace-nowrap leading-none h-full"
+                className="font-FoundersGroteskCondensed md:text-[7vw] sm:text-[8vw] text-[24vw] uppercase font-bold whitespace-nowrap leading-none"
               >
                 {item}
               </h1>
@@ -38,8 +38,7 @@ function HeroSection() {
       </div>
       <div className="flex items-center justify-between border-t-[1px] border-zinc-800 py-5 font-NueueMontreal">
         {[
-          "For public and private companies",
-          "From the first pitch to IPO",
+          "Building scalable backend systems","From idea to deployment"
         ].map((item, index) => (
           <p
             key={index}
@@ -50,7 +49,7 @@ function HeroSection() {
         ))}
         <div className="start flex items-center gap-4">
           <div className="rounded-full border-[1px] font-NueueMontreal border-zinc-500 px-5 py-2 text-sm font-light whitespace-nowrap uppercase">
-            Start the Project
+            View My Work
           </div>
           <div className="flex h-10 w-10 items-center justify-center rounded-full border-[1px] border-zinc-500">
             <span className="rotate-45">

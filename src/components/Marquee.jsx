@@ -13,26 +13,27 @@ function Marquee() {
         <motion.h1
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
-          transition={{ ease: "linear", repeat: Infinity, duration: 5 }}
-          className="font-FoundersGroteskCondensed mb-[3vw] pr-4"
+          transition={{ ease: "linear", repeat: Infinity, duration: 4 }}
+          className="font-FoundersGroteskCondensed mb-[3vw] pr-4 "
         >
-          We are Ochi ◦
+          always building! &nbsp;
         </motion.h1>
         <motion.h1
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
-          transition={{ ease: "linear", repeat: Infinity, duration: 5 }}
-          className="font-FoundersGroteskCondensed mb-[3vw] pr-4"
+          transition={{ ease: "linear", repeat: Infinity, duration: 4 }}
+          className="font-FoundersGroteskCondensed mb-[3vw]"
+          
         >
-          We are Ochi ◦
+          always building! &nbsp;
         </motion.h1>
         <motion.h1
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
-          transition={{ ease: "linear", repeat: Infinity, duration: 5 }}
+          transition={{ ease: "linear", repeat: Infinity, duration:  4 }}
           className="font-FoundersGroteskCondensed mb-[3vw]"
         >
-          We are Ochi ◦
+          always building! &nbsp;
         </motion.h1>
       </div>
     </div>

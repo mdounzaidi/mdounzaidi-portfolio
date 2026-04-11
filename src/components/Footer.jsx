@@ -7,15 +7,16 @@ function Footer() {
     <div className="w-full h-fit bg-[#1d1f1e]">
       <div className="container md:flex-row flex flex-col py-10">
         <div className="md:w-1/2 w-full flex flex-col gap-10 justify-between">
-          <h1 className="font-FoundersGroteskCondensed uppercase text-6xl">
-            Eye- <br /> Opening
+          <h1 className="font-FoundersGroteskCondensed uppercase text-6xl  font-bold">
+            LET’S  <br /> CONNECT
           </h1>
-          <img src={Logo} className="w-16 hidden md:block" alt="ochi logo" />
+          <img src={"./src/assets/images/logo.png"} className="w-50 brightness-0 inverts hidden md:block" alt="mdounzaidi" />
         </div>
         <div className="md:w-1/2 w-full flex flex-col justify-between gap-5">
           <div className="links flex flex-col font-NueueMontreal mt-10 md:mt-0">
             <h1 className="font-NueueMontreal text-3xl md:text-4xl mb-4 border-b-[1px] border-zinc-700 pb-4">
-              Connect with us
+              
+              Get in touch
             </h1>
             {["Facebook", "Twitter", "Instagram", "LinkedIn"].map(
               (item, index) => (
@@ -30,8 +31,8 @@ function Footer() {
             )}
           </div>
           <div className="flex justify-between font-NueueMontreal">
-            <p>© ochi design 2024.</p>
-            <p>Website by Obys</p>
+            <p>👉 © 2026 Mohd Oun Zaidi.</p>
+
           </div>
         </div>
       </div>

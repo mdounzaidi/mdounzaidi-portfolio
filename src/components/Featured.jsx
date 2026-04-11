@@ -87,6 +87,7 @@ function Featured() {
         See all Projects
         <FaArrowUpLong className="rotate-45 origin-center translate-y-[2px]" />
       </div>
+      <div className="mb-[5vw]"></div>
     </div>
   );
 }

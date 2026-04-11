@@ -29,7 +29,6 @@ function App() {
       <About />
       <Eyes />
       <Featured />
-      <Cards />
       <Footer />
     </div>
   );

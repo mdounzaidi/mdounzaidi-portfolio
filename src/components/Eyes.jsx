@@ -16,7 +16,7 @@ function Eyes() {
       var angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
 
       // Update the rotation
-      setRotate(angle - 180);
+      setRotate(angle );
     });
   });
 
@@ -26,30 +26,33 @@ function Eyes() {
         data-scroll
         data-scroll-section
         data-scroll-speed="-0.5"
-        className="w-full relative h-[300px] sm:h-screen bg-cover bg-center bg-[url('https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-1440x921.jpg')]"
+        className="w-full relative h-[20vh] sm:h-screen bg-cover bg-center bg-[#004D43]"
       >
         <div className="absolute flex gap-10 top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]">
           <div className="w-[24vw] md:w-[15vw] h-[24vw] md:h-[15vw] flex items-center justify-center bg-zinc-100 rounded-full">
-            <div className="w-2/3 h-2/3 relative rounded-full bg-zinc-900">
+            <div className="w-4/5 h-4/5 relative rounded-full bg-zinc-900">
+
               <div
                 style={{
                   transform: `translate(-50%, -50%) rotate(${rotate}deg)`,
+                  transformOrigin: "center center",
                 }}
-                className="line w-full h-10 absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]"
+                className="absolute top-1/2 left-1/2 w-full h-full"
               >
-                <div className="w-[3vw] h-[3vw] rounded-full bg-zinc-100"></div>
+                <div className="absolute top-1/2 right-6 -translate-y-1/2 w-6 h-6 rounded-full bg-zinc-100"></div>
               </div>
             </div>
           </div>
           <div className="w-[24vw] md:w-[15vw] h-[24vw] md:h-[15vw] flex items-center justify-center bg-zinc-100 rounded-full">
-            <div className="w-2/3 h-2/3 relative rounded-full bg-zinc-900">
+            <div className="w-4/5 h-4/5 relative rounded-full bg-zinc-900">
               <div
                 style={{
                   transform: `translate(-50%, -50%) rotate(${rotate}deg)`,
+                  transformOrigin: "center center",
                 }}
-                className="line w-full h-10 absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]"
+                className="absolute top-1/2 left-1/2 w-full h-full"
               >
-                <div className="w-[3vw] h-[3vw] rounded-full bg-zinc-100"></div>
+                <div className="absolute top-1/2 right-6 -translate-y-1/2 w-6 h-6 rounded-full bg-zinc-100"></div>
               </div>
             </div>
           </div>
