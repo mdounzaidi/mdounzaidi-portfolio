@@ -11,7 +11,11 @@ function HeroSection() {
       className="container w-full"
     >
       <div className="textstructure py-[10vh] pt-[16vh]">
-        {["I ENGINEER", "MODERN ","APPLICATIONS"].map((item, index) => (
+        {[
+          { desktop: "I ENGINEER", mobile: "I ENGINEER" },
+          { desktop: "MODERN ", mobile: "MODERN" },
+          { desktop: "APPLICATIONS", mobile: "APPS" },
+        ].map((item, index) => (
           <div key={index} className="masker">
             <div className="w-fit flex items-center overflow-hidden ">
               {index === 1 && (
@@ -28,15 +32,16 @@ function HeroSection() {
               )}
               <h1
                 key={index}
-                className="font-FoundersGroteskCondensed md:text-[7vw] sm:text-[8vw] text-[24vw] uppercase font-bold whitespace-nowrap leading-none"
+                className="font-FoundersGroteskCondensed text-[15vw] uppercase font-bold whitespace-nowrap leading-none sm:text-[8vw] md:text-[7vw]"
               >
-                {item}
+                <span className="sm:hidden">{item.mobile}</span>
+                <span className="hidden sm:inline">{item.desktop}</span>
               </h1>
             </div>
           </div>
         ))}
       </div>
-      <div className="flex items-center justify-between border-t-[1px] border-zinc-800 py-5 font-NueueMontreal">
+      <div className="hidden items-center justify-between border-t-[1px] border-zinc-800 py-5 font-NueueMontreal sm:flex">
         {[
           "Building scalable backend systems","From idea to deployment"
         ].map((item, index) => (

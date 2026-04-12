@@ -1,15 +1,20 @@
-import React from "react";
-import Logo from "../assets/logo.svg";
-// import { LuMenu } from "react-icons/lu";
-import myImage from "../assets/images/logo.png"; ;
+import React, { useState } from "react";
+import { LuMenu, LuX } from "react-icons/lu";
+import myImage from "../assets/images/logo.png";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
   const navLinks = ["Home", "About", "Projects", "Skills", "Experience", "Contact"];
+
   return (
-    <div className="sticky bg-zinc-900/40 backdrop-blur-md top-0 z-[999] py-4 sm:py-5">
+    <div className="sticky top-0 z-[999] bg-zinc-900/40 py-4 backdrop-blur-md sm:py-5">
       <div className="container w-full font-NueueMontreal flex items-center justify-between">
         <div className="logo">
-          <img src={myImage} className="w-39 brightness-0 invert " alt="ochi logo" />
+          <img
+            src={myImage}
+            className="w-28 brightness-0 invert sm:w-36"
+            alt="ochi logo"
+          />
         </div>
         <div className="links items-center gap-10 hidden md:flex">
           {navLinks.map((item, index) => (
@@ -31,8 +36,33 @@ function Navbar() {
             </a>
           ))}
         </div>
-        {/* <LuMenu className="md:hidden block text-3xl" /> */}
+        <button
+          type="button"
+          onClick={() => setIsOpen((prev) => !prev)}
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-zinc-800 text-2xl md:hidden"
+          aria-label="Toggle navigation menu"
+        >
+          {isOpen ? <LuX /> : <LuMenu />}
+        </button>
       </div>
+
+      {isOpen && (
+        <div className="container mt-4 md:hidden">
+          <div className="rounded-3xl border border-zinc-800 bg-zinc-900/95 px-5 py-4 shadow-2xl">
+            <div className="flex flex-col gap-4">
+              {navLinks.map((item) => (
+                <a
+                  key={item}
+                  className="border-b border-zinc-800 pb-3 text-base font-light capitalize text-zinc-200 last:border-b-0 last:pb-0"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

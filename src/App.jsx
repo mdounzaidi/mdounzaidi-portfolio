@@ -7,6 +7,7 @@ import Eyes from "./components/Eyes";
 import Featured from "./components/Featured";
 import Cards from "./components/Cards";
 import Footer from "./components/Footer";
+import MobileSkills from "./components/MobileSkills";
 import LocomotiveScroll from "locomotive-scroll";
 
 function App() {
@@ -27,7 +28,10 @@ function App() {
       <HeroSection />
       <Marquee />
       <About />
-      <Eyes />
+      <div className="hidden sm:block">
+        <Eyes />
+      </div>
+      <MobileSkills />
       <Featured />
       <Footer />
     </div>
