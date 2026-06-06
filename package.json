@@ -5,11 +5,11 @@
   "type": "module",
   "homepage": "https://mdounzaidi.github.io/mdounzaidi-portfolio",
   "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview",
-  "deploy": "npm run build && gh-pages -d dist"
-},
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build"
+  },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
     "gsap": "^3.14.2",
