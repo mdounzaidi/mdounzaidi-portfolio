@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import HomeLogoLink from "../components/HomeLogoLink";
 import StatusMessage from "../components/StatusMessage";
 import { getPublicArticle } from "../services/articleApi";
 
@@ -36,8 +35,7 @@ function ArticleDetailPage() {
   return (
     <section className="min-h-screen bg-zinc-900 px-4 py-10 text-white">
       <article className="container max-w-4xl">
-        <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-          <HomeLogoLink />
+        <div className="flex justify-end">
           <Link
             to="/articles"
             className="inline-flex w-fit rounded-full border border-zinc-800 px-5 py-3 text-sm text-zinc-300 hover:border-zinc-600 hover:text-white"

@@ -4,6 +4,7 @@ import myImage from "../assets/images/my1.jpeg";
 function About() {
   return (
     <div
+      id="about"
       data-scroll
       data-scroll-section
       data-scroll-speed="0.01"

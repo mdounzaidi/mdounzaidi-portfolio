@@ -4,7 +4,7 @@ import { FaArrowUpLong } from "react-icons/fa6";
 
 function Footer() {
   return (
-    <div className="w-full h-fit bg-[#1d1f1e]">
+    <div id="contact" className="w-full h-fit bg-[#1d1f1e]">
       <div className="container md:flex-row flex flex-col py-10">
         <div className="md:w-1/2 w-full flex flex-col gap-10 justify-between">
           <h1 className="font-FoundersGroteskCondensed uppercase text-6xl  font-bold">

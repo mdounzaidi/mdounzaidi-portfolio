@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import LocomotiveScroll from "locomotive-scroll";
 import AuthPage from "./components/AuthPage";
 import DashboardLayout from "./components/DashboardLayout";
+import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
 import RoleRoute from "./components/RoleRoute";
 import ArticleDetailPage from "./pages/ArticleDetailPage";
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <div className="w-full min-h-screen bg-zinc-900 text-white">
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/auth" element={<AuthPage />} />

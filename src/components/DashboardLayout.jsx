@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import HomeLogoLink from "./HomeLogoLink";
 
 function DashboardLayout() {
   const { account, roles, signOut, hasAnyRole } = useAuth();
@@ -22,18 +21,15 @@ function DashboardLayout() {
 
   return (
     <div className="min-h-screen bg-zinc-900 text-white">
-      <header className="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-900/80 backdrop-blur-md">
+      <header className="border-b border-zinc-800 bg-zinc-900/80">
         <div className="container flex flex-col gap-5 py-5 md:flex-row md:items-center md:justify-between">
-          <div className="flex items-center gap-5">
-            <HomeLogoLink />
-            <div className="border-l border-zinc-800 pl-5">
-              <p className="text-xs uppercase tracking-[0.3em] text-zinc-500">
-                Dashboard
-              </p>
-              <h1 className="mt-1 text-2xl font-medium">
-                {account?.firstName || account?.username || "Account"}
-              </h1>
-            </div>
+          <div>
+            <p className="text-xs uppercase tracking-[0.3em] text-zinc-500">
+              Dashboard
+            </p>
+            <h1 className="mt-1 text-2xl font-medium">
+              {account?.firstName || account?.username || "Account"}
+            </h1>
           </div>
 
           <div className="flex flex-wrap items-center gap-3">

@@ -1,22 +1,23 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import HomeLogoLink from "../components/HomeLogoLink";
+import { Link, useSearchParams } from "react-router-dom";
 import StatusMessage from "../components/StatusMessage";
 import { getPublicArticles, searchPublicArticles } from "../services/articleApi";
 
 function ArticlesPage() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [articles, setArticles] = useState([]);
   const [pageInfo, setPageInfo] = useState({ number: 0, totalPages: 0, first: true, last: true });
-  const [keyword, setKeyword] = useState("");
-  const [activeKeyword, setActiveKeyword] = useState("");
+  const urlKeyword = searchParams.get("keyword") || "";
+  const [keyword, setKeyword] = useState(urlKeyword);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
-    loadArticles(0, activeKeyword);
-  }, [activeKeyword]);
+    setKeyword(urlKeyword);
+    loadArticles(0, urlKeyword);
+  }, [urlKeyword]);
 
-  async function loadArticles(page = 0, searchTerm = activeKeyword) {
+  async function loadArticles(page = 0, searchTerm = urlKeyword) {
     try {
       setLoading(true);
       setError("");
@@ -40,15 +41,17 @@ function ArticlesPage() {
 
   function handleSearch(event) {
     event.preventDefault();
-    setActiveKeyword(keyword.trim());
+    const search = keyword.trim();
+    if (search) {
+      setSearchParams({ keyword: search });
+    } else {
+      setSearchParams({});
+    }
   }
 
   return (
     <section className="min-h-screen bg-zinc-900 px-4 py-10 text-white">
       <div className="container">
-        <div className="mb-8">
-          <HomeLogoLink />
-        </div>
         <div className="mb-10 flex flex-col gap-5 border-b border-zinc-800 pb-8 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-sm uppercase tracking-[0.35em] text-zinc-500">Articles</p>
@@ -111,6 +114,7 @@ function ArticlesPage() {
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-zinc-500">
             Page {pageInfo.totalPages === 0 ? 0 : pageInfo.number + 1} of {pageInfo.totalPages}
+            {urlKeyword && <span> · Search: {urlKeyword}</span>}
           </p>
           <div className="flex gap-3">
             <button

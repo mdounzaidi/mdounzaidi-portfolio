@@ -17,7 +17,7 @@ function Featured() {
     });
   };
   return (
-    <div className="container w-full sm:pt-20 pt-10">
+    <div id="projects" className="container w-full sm:pt-20 pt-10">
       <div className="w-full border-b-[1px] border-zinc-700 pb-5">
         <h1 className="text-4xl sm:text-6xl">Featured Projects</h1>
       </div>
